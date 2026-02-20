@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [ main, master ]
 
+# Permissões necessárias para o GitHub Actions conseguir criar a página de relatório
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -22,16 +28,34 @@ jobs:
           cache: maven
 
       - name: Rodar Testes via Maven
+        # Adicionamos continue-on-error para o relatório ser gerado mesmo se um teste falhar
         run: mvn clean test
+        continue-on-error: true
 
-      - name: Gerar Relatório Allure
+      - name: Get Allure history
+        # Busca o histórico de testes anteriores para gerar o gráfico de evolução
+        uses: actions/checkout@v4
         if: always()
-        run: |
-          mvn allure:report
-
-      - name: Upload do Relatório como Artefato
-        if: always()
-        uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
-          name: allure-report
-          path: target/site/allure-maven-plugin
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Allure Report Action
+        # Transforma os resultados JSON em um site HTML
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: target/allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report
+          allure_history: allure-history
+
+      - name: Deploy do Relatório para o GitHub Pages
+        # Publica o site final na branch gh-pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history

@@ -1,6 +1,17 @@
-🚀 Framework de Automação Java + Selenium + Allure
+# 🚀 Framework de Automação Java + Selenium + Allure
 
-Este projeto utiliza Java, Selenium WebDriver e Cucumber para automação de testes Web, com relatórios avançados gerados pelo Allure Report.
+![Test Status](https://github.com/leandrosist/automation-test-java-selenium/actions/workflows/tests.yml/badge.svg)
+[![Relatório Allure](https://img.shields.io/badge/Allure%20Report-Ver%20Resultados-green?style=for-the-badge&logo=allure)](https://leandrosist.github.io/automation-test-java-selenium/)
+
+---
+
+### 📊 Acompanhamento em Tempo Real
+* **Último Relatório:** [Clique aqui para ver os resultados dos testes](https://leandrosist.github.io/automation-test-java-selenium/)
+* **Status da Esteira:** Veja o progresso da execução na aba [Actions](https://github.com/leandrosist/automation-test-java-selenium/actions).
+
+
+Este projeto utiliza Java, Selenium WebDriver e Cucumber para automação de testes Web, com relatórios avançados gerados pelo Allure Report  e execução via GitHub Actions.
+
 📋 Pré-requisitos
 1. Java JDK 17
 
