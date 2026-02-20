@@ -40,7 +40,7 @@ jobs:
           allure_results: target/allure-results
           allure_report: allure-report
           allure_history: allure-history
-          keep_histories: 20
+          keep_reports: 20
 
       - name: Deploy do Relatório para o GitHub Pages
         # Esta Action cria a branch gh-pages automaticamente e sobe o relatório
