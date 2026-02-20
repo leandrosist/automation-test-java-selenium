@@ -1,1 +1,0 @@
-{"881a66a1fcdc7efdefc1c5dccbe6169c":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"784e24256e51b9d2","reportUrl":"https://leandrosist.github.io/automation-test-java-selenium/4/#testresult/784e24256e51b9d2","status":"passed","time":{"start":1771629942505,"stop":1771629952737,"duration":10232}}]}}

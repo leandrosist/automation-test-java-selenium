@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","812","Login com senha incorreta","","Fri Feb 20 23:29:29 UTC 2026","passed","Fri Feb 20 23:29:30 UTC 2026","","Login no sistema","Login com senha incorreta",""
+"","9686","Login com sucesso","","Fri Feb 20 23:29:19 UTC 2026","passed","Fri Feb 20 23:29:29 UTC 2026","","Login no sistema","Login com sucesso",""

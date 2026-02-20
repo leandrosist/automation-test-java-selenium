@@ -1,0 +1,1 @@
+[{"uid":"8b9ebaa790f5773f","name":"Login com sucesso","time":{"start":1771630159432,"stop":1771630169118,"duration":9686},"status":"passed","severity":"normal"},{"uid":"7f70052a34abba3f","name":"Login com senha incorreta","time":{"start":1771630169194,"stop":1771630170006,"duration":812},"status":"passed","severity":"normal"}]
